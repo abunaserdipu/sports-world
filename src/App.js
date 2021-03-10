@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 import './App.css';
+import Banner from "./Components/Banner/Banner";
+import Home from "./Components/Home/Home";
+import LeagueDetail from "./LeagueDetail/LeagueDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Banner/>
+      <Switch>
+        <Route path="/home">
+          <Home/>
+        </Route>
+        <Route path="/league/:idLeague">
+          <LeagueDetail/>
+        </Route>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route path="*">
+          <h1 style={{textAlign: 'center'}}>404 Not Found</h1>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
