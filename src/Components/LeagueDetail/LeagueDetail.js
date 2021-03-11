@@ -31,11 +31,11 @@ const LeagueDetail = () => {
     <div>
       <div style={{ position: "relative" }}>
         <img
-          style={{ width: "100%", height: "200px" }}
+          style={{ width: "100%", height: "200px", opacity: "0.1" }}
           src={league.strBanner}
           alt=""
         />
-
+        <div style={{}}></div>
         <div
           style={{
             position: "absolute",
