@@ -4,13 +4,19 @@ import bannerImage from "../../banner.jpg";
 
 const Banner = () => {
   return (
-    <div >
-      <div className="banner-image" style={{backgroundImage: `url(${bannerImage})`}}>
+    <div className="banner-image">
+      <img
+          style={{
+            width: "100%",
+            height: "200px",
+            backgroundSize: 'cover',
+          }}
+          src={bannerImage}
+          alt=""
+        />
       <div className="banner-text">
-        <h3>Sports World</h3>
+        <h2>Sports World</h2>
       </div>
-      </div>
-      
     </div>
   );
 };

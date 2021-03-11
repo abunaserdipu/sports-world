@@ -8,7 +8,7 @@ import {
 import './App.css';
 import Banner from "./Components/Banner/Banner";
 import Home from "./Components/Home/Home";
-import LeagueDetail from "./LeagueDetail/LeagueDetail";
+import LeagueDetail from "./Components/LeagueDetail/LeagueDetail";
 
 function App() {
   return (
